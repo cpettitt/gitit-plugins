@@ -1,5 +1,8 @@
---module ConceptMap (plugin) where
-module ConceptMap where
+-- | A plugin for gitit (http://gitit.johnmacfarlane.net/) that renders a
+-- concept map for each wiki page. The concept map consists of links coming
+-- in and links going out.
+
+module ConceptMap (plugin) where
 
 import Control.Monad (liftM, when)
 import Control.Monad.Trans
