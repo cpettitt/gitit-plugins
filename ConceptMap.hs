@@ -43,7 +43,7 @@ pageTransform x = do
     if not (pgPrintable layout)
         then do
             idx' `seq` liftIO (saveIndex indexFile idx')
-            cmap <- liftIO (dot filePath (toDot pageName idx))
+            cmap <- liftIO (dot filePath (toDot pageName idx'))
 
             let imgHtml = "<h2>Concept Map</h2><img border=\"0\" usemap='#CM-"
                         ++ pageName ++ "' src='" ++ url ++ "'/>"
